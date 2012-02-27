@@ -1,0 +1,54 @@
+plugin.tx_wecservant_pi1 {
+# cat=plugin.tx_wecservant_pi1/file/1; type=file[html,htm,tmpl,txt]; label= Template File: HTML template file for display of the Discussion Forum.
+  templateFile 		= EXT:wec_servant/template/wecservant-orig.tmpl
+
+#cat=plugin.tx_wecservant_pi1/dims/2a; type=string; label= Width Of Servant Matcher Content
+  totalWidth 		= 650px
+
+#cat=plugin.tx_wecservant_pi1/dims/2b; type=string; label= Display Items Width
+  displayItemWidth 		= 100%
+#cat=plugin.tx_wecservant_pi1/dims/2c; type=string; label= Display Items Label Width (left-side)
+  displayItemLabelWidth = 25%
+#cat=plugin.tx_wecservant_pi1/dims/2d; type=string; label= Display Items Text Width (right-side)
+  displayItemTextWidth  = 73%
+#cat=plugin.tx_wecservant_pi1/color/2e; type=color; label= Display Items Background Color
+  displayItemBackColor 	= #FFFFFF
+#cat=plugin.tx_wecservant_pi1/color/2f; type=color; label= Display Items Background Color #2 (for alternating)
+  displayItemBackColor2	= #E0E0E0
+
+#cat=plugin.tx_wecservant_pi1/dims/2e; type=string; label= Signup Form Width
+  formWidth 		= 90%
+#cat=plugin.tx_wecservant_pi1/dims/2f; type=string; label= Signup Form Label Width
+  formLabelWidth  	= 20%
+#cat=plugin.tx_wecservant_pi1/dims/2g; type=string; label= Signup Form Input Field Width
+  formInputWidth  	= 78%
+#cat=plugin.tx_wecservant_pi1/dims/2h; type=string; label= Signup Form Text Area Height
+  formTextAreaHeight  = 80px
+#cat=plugin.tx_wecservant_pi1/color/1a; type=color; label= Signup Form Background Color
+  formBackColor 	= #E8E0F0
+
+#cat=plugin.tx_wecservant_pi1/color/2a; type=color; label= Button Background Color
+  btnBackColor 		= #888888
+#cat=plugin.tx_wecservant_pi1/color/2b; type=color; label= Button Text Color
+  btnColor 			= #FFFFFF
+#cat=plugin.tx_wecservant_pi1/color/2c; type=color; label= Button Hover Background Color
+  btnHoverBackColor = #AC0000
+#cat=plugin.tx_wecservant_pi1/color/2d; type=color; label= Button Hover Color
+  btnHoverColor 	= #FFF0C0
+
+#cat=plugin.tx_wecservant_pi1/dims/3a; type=string; label= Skill Column Width
+  skillColWidth 	= 33%
+
+#cat=plugin.tx_wecservant_pi1/misc/2a; type=string; label= Email Substitute For @
+  emailAtSubstitute	= &#064;
+
+#cat=plugin.tx_wecservant_pi1/misc/1a; type=string; label= Maximum # To Display
+  maxMatchesToShow	= 250
+
+#cat=plugin.tx_wecservant_pi1/file/2; type=int+; label= Staff Directory Page ID # (if want linked)
+  staffDirectoryPage =
+
+#cat=plugin.tx_wecservant_pi1/file/9a; type=int+; label= Can just view ministry opportunities (not select), by adding name or 'all' to list all
+  viewMinistryOpps =
+
+}

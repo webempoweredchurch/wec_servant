@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Admin: Servant Matcher Menu</title>
+</head>
+
+<body>
+
+<div style="width:650px;color:#FFFFFF;background-color:#00000">
+<div style="float:left;width:70%;font-size:13px;">
+	<form action="" method="post">
+	  FIND BY:  Ministries:
+	  <select name="ministryList" size="1">
+	    <option selected>select...</option>
+	    </select>
+	  Contact:
+	  <select name="contactList" size="1">
+	    <option selected>select...</option>
+	    </select>
+	  Last Updated:
+	  <select name="contactList" size="1">
+	    <option selected>select #</option>
+	    <option value="5">Last 5</option>
+	    <option value="10">Last 10</option>
+	    <option value="15">Last 15</option>
+	    <option value="20">Last 20</option>
+	    <option value="30">Last 30</option>
+	          </select>
+	</form>
+</div>
+<div style="float:left;width:28%">
+  <form action="" method="post">
+  <div align="right">Search for:
+      <input name="searchFor" type="text" size="20" maxlength="50">
+      <input name="search" type="button" value="search">
+  </div>
+  </form>
+</div>
+<p>&nbsp;</p>
+<div style="float:left;width:100%;text-align:center;font-size:16px;font-weight:bold;padding:6px;clear:both;">Enter/Edit Ministry Opportunity</div>
+<form action="" method="post">
+	<div style="float:left;width:200px;text-align:right;padding-right:10px;">Title:</div><div style="float:left;width:500px;"><input name="tx_wecservant[name]" type="text" value="" size="30" maxlength="50"></div>
+	<div style="float:left;width:200px;text-align:right;padding-right:10px;">Ministry Area:</div><div style="float:left;width:500px;"><select name="ministryList" size="1"></select></div>
+	<div style="float:left;width:200px;text-align:right;padding-right:10px;">Contact:</div><div style="float:left;width:500px;"><input name="tx_wecservant[title]" type="text" value="" size="30" maxlength="50"></div>
+	<div style="float:left;width:200px;text-align:right;padding-right:10px;">Description:</div><div style="float:left;width:500px;"><textarea name="textarea" cols="40" rows="3" wrap="VIRTUAL"></textarea></div>
+	<div style="float:left;width:200px;text-align:right;padding-right:10px;">Location:</div><div style="float:left;width:500px;"><input name="tx_wecservant[title]" type="text" value="" size="30" maxlength="50"></div>
+	<div style="float:left;width:200px;text-align:right;padding-right:10px;">Times Needed:</div><div style="float:left;width:500px;"><input name="tx_wecservant[title]" type="text" value="" size="30" maxlength="50"></div>
+	<div style="float:left;width:200px;text-align:right;padding-right:10px;">Priority:</div>
+	<div style="float:left;width:350px;">
+		Urgent:<input name="priority" type="radio" value="Urgent">
+		High:<input name="priority" type="radio" value="High">
+		Normal:<input name="priority" type="radio" value="Normal">
+		Low:<input name="priority" type="radio" value="Low">
+		Special:<input name="priority" type="radio" value="Special">
+	</div>
+	<div style="float:left;width:250px;text-align:right;padding-right:10px;">Skills Needed:</div><div style="float:left;width:500px;">#1:<select name="skillList1" size="1"></select>  #2:<select name="skillList2" size="1"></select> #3:<select name="skillList3" size="1"></select>  #4:<select name="skillList4" size="1"></select> #5:<select name="skillList5" size="1"></select></div>
+	<div style="float:left;width:100%;text-align:center;"><input name="Create/Edit" type="button" value="Create / Edit">&nbsp;&nbsp;<input name="Delete" type="button" id="Delete" value="Delete">
+	</div>
+
+</form>
+</div>
+
+</body>
+</html>

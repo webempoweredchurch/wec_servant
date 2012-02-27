@@ -1,0 +1,172 @@
+/****************  SERVANT MATCHER   ********************/
+
+.tx-wecservant-pi1 {
+	max-width: 800px;
+	min-width: 350px;
+}
+.pluginHeader {
+	float:  left;
+	width:	100%;
+}
+.pluginHeader h3 {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.pluginNav div.box {
+	width: auto;
+	margin: 2px 20px 2px 0px;
+	padding: 0px;
+}
+.pluginNav a.button {
+	font-size:12px;
+	font-weight: normal;
+	padding: 1px 6px;
+}
+.pluginNav select {
+	padding: 2px 0;
+}
+
+.pluginSection {
+	float:		left;
+}
+
+.pluginSection .entries {
+	float:		left;
+	margin-top: 10px;
+	width:		100%;
+}
+.pluginSection h3 {
+	font-weight: bold;
+	font-size: 16px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.pluginSection h4 {
+	font-size: 14px;
+	margin-top: 8px;
+	margin-bottom: 8px;	
+}
+.pluginSection .bottomRow {
+	clear:			both;
+	padding:		6px 0px;
+	text-align:		center;
+	margin:			0px auto;	
+}
+.pluginSection .bottomRow input {
+	margin-right:	6px;
+}
+.pluginSection div.section {
+	width:	100%;
+	float:	left;
+}
+
+ul.entry {
+	border: 2px solid #ccc;
+	border-radius: 6px;
+	-moz-border-radius: 6px;
+	padding: 6px;
+	list-style-type: none;
+	background-image: -moz-linear-gradient(90deg, #ddd, #fff);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#ddd), to(#fff));
+}
+ul.entry .header {
+	font-size: 16px;
+	font-weight: bold;
+	margin: 6px 2px;
+}
+ul.entry .left_col {
+	width:	25%;
+	font-weight:bold;
+	line-height:1.1em;
+	clear: left;
+	float:left;
+	margin: 0px 0px 8px 2px;
+}
+ul.entry .right_col {
+	width:70%;
+	clear:right;
+	float:left;
+	margin: 0px 0px 8px;
+}
+ul.entry .row {
+	margin: 0px;
+	padding:0px;
+	clear:	both;
+}
+li.buttonRow {
+	width: 100%;
+	margin: 8px 2px;
+	clear:			both;
+}
+ul.entry div.button {
+	display: inline;	
+}
+.multiList{ 
+	float:left;  
+	width:100%; 
+	padding:0; 
+	margin-bottom:1em; 
+	min-width: 450px;
+}
+
+.multiList ul {
+	width: 100%; 
+	margin: 0; 
+	padding: 0; 
+	list-style-type: none;
+}
+
+.multiList ul li 	{ 
+	float: 	left; 
+	height:	1.9em; 
+	margin: 	0; 
+	padding: 	0; 
+	overflow:visible;
+	width:	33%;
+}
+.horizSection {
+	margin-right:	20px;
+}
+
+.adminHeader {
+	font-size:		16px;
+	padding:		8px;
+	font-weight:	bold;
+}
+.adminResults {
+	font-size:		14px;
+	padding:		8px;
+	font-weight:	bold;
+}
+.adminItem {
+	font-size:		13px;
+	padding-left:	20px;
+	margin-bottom:	6px;
+}
+.adminBox {
+	font-size:		12px;
+	border:			1px dotted #444;	
+}
+.adminSubheader {
+	font-size:		14px;
+}
+
+@media print {
+
+.pluginHeader,
+.pluginNav,
+.buttonRow,
+a.button  {
+	display:none;
+}
+
+.singleView {
+	display: block;
+	float: none !important;
+	width: 100%;
+}
+
+}
+
+

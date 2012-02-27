@@ -1,0 +1,28 @@
+plugin.tx_wecservant_pi1 = USER_INT
+
+plugin.tx_wecservant_pi1 {
+	templateFile 		= {$plugin.tx_wecservant_pi1.templateFile}
+	baseCSSFile 		= {$plugin.tx_wecservant_pi1.baseCSSFile}
+	cssFile 			= {$plugin.tx_wecservant_pi1.cssFile}
+  	totalWidth 			= {$plugin.tx_wecservant_pi1.totalWidth}
+
+	emailAtSubstitute	= {$plugin.tx_wecservant_pi1.emailAtSubstitute}
+	maxMatchesToShow	= {$plugin.tx_wecservant_pi1.maxMatchesToShow}
+	staffDirectoryPage	= {$plugin.tx_wecservant_pi1.staffDirectoryPage}
+	viewMinistryOpps	= {$plugin.tx_wecservant_pi1.viewMinistryOpps}
+		
+	isLoaded = yes
+	
+   # Re-use the RTE parseFunc configuration for normal content
+   mail_stdWrap {
+      parseFunc < tt_content.text.20.parseFunc
+	  parseFunc.makelinks=1
+	  parseFunc.makelinks.mailto.keep = path
+   }	
+}
+
+
+plugin.tx_wecservant_pi1._CSS_DEFAULT_STYLE (
+
+
+)

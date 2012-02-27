@@ -1,0 +1,487 @@
+<!--
+	Templates for the wec_servant extension:
+
+		###TEMPLATE_PAGE		-- the main page
+		###TEMPLATE_DISPLAYITEM -- for one posted opportunity
+		###TEMPLATE_SIGNUPFORM 	-- the form for signing up for an opportunity
+		###TEMPLATE_PREVIEW		-- the look for a preview
+		###TEMPLATE_ADMINMENU	-- the forms for the admin menu
+-->
+<!--
+=====================================================================================================
+###TEMPLATE_PAGE### begin
+=====================================================================================================
+-->
+<div class="tx-wecservant-pi1 pluginContent"> ###JAVASCRIPT_CODE###
+    <div class="pluginHeader">
+ 		<!-- ###SHOW_TITLE### begin--><h3>###TITLE###</h3><!-- ###SHOW_TITLE### end-->
+  		<!-- ###SHOW_HEADER_TEXT### begin--><h4>###HEADER_TEXT### </h4><!-- ###SHOW_HEADER_TEXT### end-->
+		<!-- ###SHOW_RESPONSE_MSG### begin--><div class="success">###RESPONSE_MSG_TEXT###</div><!-- ###SHOW_RESPONSE_MSG### end-->
+	</div>
+	
+	<div class="pluginNav alignRight">
+	  ###VIEW_SAVED_MINOPPS_LINK###
+	  ###PRINT_SAVED_MINOPPS_LINK### 
+	  ###PRINT_BUTTON### 
+	  ###ADMIN_LINK###
+	</div>  
+	
+  	<!-- ###SHOW_HEADER### begin -->
+	<div class="pluginNav">
+	  <div class="box floatLeft">
+	    <div>###FIND_BY_MINISTRY_HEADER###</div>
+	    <div>###FIND_BY_MINISTRY###</div>
+	  </div>
+	  <div class="box floatLeft">
+	    <div>###FIND_BY_NEEDS_HEADER###</div>
+	    <div>###FIND_BY_NEEDS###</div>
+	  </div>
+	  <div class="box floatLeft">
+	    <div>###FIND_BY_LASTADDED_HEADER###</div>
+	    <div>###FIND_BY_LASTADDED###</div>
+	  </div>
+	</div>
+  	<!-- ###SHOW_HEADER### end -->
+  
+	<!-- ###SHOW_FIND_MINISTRIES### begin -->
+   	<div class="pluginNav">
+	  	<h4>###FIND_BY_MINISTRIES_HEADER###</h4>
+	  	###TOGGLE_FIND_MINISTRIES###
+	  	<div>###FIND_BY_MINISTRIES###</div>
+	  	###TOGGLE_FIND_MINISTRIES_OFF###
+	 </div>
+	<!-- ###SHOW_FIND_MINISTRIES### end -->
+	<!-- ###SHOW_FIND_SKILLS### begin -->
+	 <div class="pluginNav">
+	  	<h4>###FIND_BY_SKILLS_HEADER###</h4>
+	  	###TOGGLE_FIND_SKILLS###
+	  	<div>###FIND_BY_SKILLS###</div>
+	  	###TOGGLE_FIND_SKILLS_OFF###
+	 </div>
+	<!-- ###SHOW_FIND_SKILLS### begin -->
+
+	<div class="pluginSection">
+	  	###DISPLAY_RESULTS_HEADER###
+		<div class="entries">###DISPLAY_RESULTS###</div>
+		<!-- ###SHOW_BOTTOM_BUTTONS### begin -->
+		  <div class="bottomRow"> 
+			###BOTTOM_BUTTONS_CODE###
+		    ###SAVE_SEL_BTN### ###CLEAR_SEL_BTN### ###SELECT_ALL_BTN###
+		  </div>
+		<!-- ###SHOW_BOTTOM_BUTTONS### end -->
+	    ###SIGNUP_BTN### ###COMMITMENT_BTN### 
+	</div>
+</div>
+<div class="clearOnly"></div>
+<!-- ###TEMPLATE_PAGE### end -->
+
+
+<!--
+=====================================================================================================
+###TEMPLATE_DISPLAYITEM### begin
+
+ Template for a single item. This is repeated for each item
+=====================================================================================================
+-->
+<ul class="entry">
+	<li class="header">###NAME###</li>
+    <li ###SHOW_MINISTRY_INFO###> <span class="left_col">###ITEMLABEL_MINISTRY_INFO###</span><span class="right_col">###MINISTRY_INFO###</span> </li>
+    <li ###SHOW_DESCRIPTION###><span class="left_col">###ITEMLABEL_DESCRIPTION###</span><span class="right_col">###DESCRIPTION###</span></li>
+    <li ###SHOW_PRIORITY###><span class="left_col">###ITEMLABEL_PRIORITY###</span><span class="right_col">###PRIORITY###</span> </li>
+	###TOGGLE_ITEM###
+    <li ###SHOW_LOCATION###><span class="left_col">###ITEMLABEL_LOCATION###</span><span class="right_col">###LOCATION###</span> </li>
+    <li ###SHOW_TIMES_NEEDED###><span class="left_col">###ITEMLABEL_TIMES_NEEDED###</span><span class="right_col">###TIMES_NEEDED###</span> </li>
+    <li ###SHOW_MISC_DESCRIPTION###><span class="left_col">###ITEMLABEL_MISC_DESCRIPTION###</span><span class="right_col">###MISC_DESCRIPTION###</span> </li>
+    <li ###SHOW_QUALIFICATIONS###><span class="left_col">###ITEMLABEL_QUALIFICATIONS###</span><span class="right_col">###QUALIFICATIONS###</span> </li>
+    <li ###SHOW_SKILLS###><span class="left_col">###ITEMLABEL_SKILLS###</span><span class="right_col">###SKILLS###</span> </li>
+    <li ###SHOW_CONTACT_INFO###><span class="left_col">###ITEMLABEL_CONTACT_INFO###</span><span class="right_col">###CONTACT_INFO###</span> </li>
+    <li ###SHOW_CONTACT_PHONE###><span class="left_col">###ITEMLABEL_CONTACT_PHONE###</span><span class="right_col">###CONTACT_PHONE###</span> </li>
+    <li ###SHOW_CONTACT_EMAIL###><span class="left_col">###ITEMLABEL_CONTACT_EMAIL###</span><span class="right_col">###CONTACT_EMAIL###</span> </li>
+    <li ###SHOW_CONTACT_STAFFLINK###><span class="left_col">###ITEMLABEL_CONTACT_STAFFLINK###</span><span class="right_col">###CONTACT_STAFFLINK###</span> </li>
+	###TOGGLE_ITEM_END###
+	<li class="buttonRow">###EDIT_BTN### ###SIGNUP_BTN### ###COMMITMENT_BTN### ###VIEW_SINGLE### ###SAVE_ITEM###</li>
+</ul>
+<div class="clearOnly"></div>
+<!-- ###TEMPLATE_DISPLAYITEM### end -->
+
+
+<!--
+=====================================================================================================
+###TEMPLATE_SINGLE### begin
+
+ Template for a single view.
+=====================================================================================================
+-->
+<div class="singleView">
+  <h3>###NAME###</h3>
+  <ul>
+    <li ###SHOW_MINISTRY_INFO###> <span class="left_col">###ITEMLABEL_MINISTRY_INFO###</span><span class="right_col">###MINISTRY_INFO###</span> </li>
+    <li ###SHOW_DESCRIPTION###><span class="left_col">###ITEMLABEL_DESCRIPTION###</span><span class="right_col">###DESCRIPTION###</span></li>
+    <li ###SHOW_PRIORITY###><span class="left_col">###ITEMLABEL_PRIORITY###</span><span class="right_col">###PRIORITY###</span> </li>
+    <li ###SHOW_LOCATION###><span class="left_col">###ITEMLABEL_LOCATION###</span><span class="right_col">###LOCATION###</span> </li>
+    <li ###SHOW_TIMES_NEEDED###><span class="left_col">###ITEMLABEL_TIMES_NEEDED###</span><span class="right_col">###TIMES_NEEDED###</span> </li>
+    <li ###SHOW_MISC_DESCRIPTION###><span class="left_col">###ITEMLABEL_MISC_DESCRIPTION###</span><span class="right_col">###MISC_DESCRIPTION###</span> </li>
+    <li ###SHOW_QUALIFICATIONS###><span class="left_col">###ITEMLABEL_QUALIFICATIONS###</span><span class="right_col">###QUALIFICATIONS###</span> </li>
+    <li ###SHOW_SKILLS###><span class="left_col">###ITEMLABEL_SKILLS###</span><span class="right_col">###SKILLS###</span> </li>
+    <li ###SHOW_CONTACT_INFO###><span class="left_col">###ITEMLABEL_CONTACT_INFO###</span><span class="right_col">###CONTACT_INFO###</span> </li>
+    <li ###SHOW_CONTACT_PHONE###><span class="left_col">###ITEMLABEL_CONTACT_PHONE###</span><span class="right_col">###CONTACT_PHONE###</span> </li>
+    <li ###SHOW_CONTACT_EMAIL###><span class="left_col">###ITEMLABEL_CONTACT_EMAIL###</span><span class="right_col">###CONTACT_EMAIL###</span> </li>
+  </ul>
+  <div class="clearOnly"></div>
+  <div class="fullRow">###EDIT_BTN### ###SIGNUP_BTN### ###COMMITMENT_BTN### ###SAVE_ITEM###</div>
+  <div class="clearOnly"></div>
+</div>
+<!-- ###TEMPLATE_SINGLE### end -->
+
+
+<!--
+=====================================================================================================
+###TEMPLATE_SIGNUPFORM### begin
+=====================================================================================================
+   Form to signup (show interest or make commitment)
+
+-->
+<h3>###FORM_HEADER###</h3>
+
+<form class="pluginForm mediumWidth" name="forumReplyForm" method="post" action="###ACTION_URL###"  enctype="multipart/form-data">
+  ###HIDDEN_VARS###
+<!--- ###SHOW_ERRORS### begin--><div class="error">###FORM_ERROR###</div><!--- ###SHOW_ERRORS### end-->
+<div class="notice">
+ <div>###SIGNUP_TEXT###</div>
+ <div>###SIGNUP_INSTRUCTIONS###</div>
+ <div>###SHOW_REQUIRED_TEXT###</div>
+</div>
+<fieldset>
+  <ul>
+  <li>
+    <label>###FORM_NAME###<em class="required">###FORM_NAME_REQUIRED###</em></label>
+    <input name="tx_wecservant[name]" type="text" size="40" value="###VALUE_NAME###"/>
+  </li>
+  <li>
+    <label>###FORM_EMAIL###<em class="required">###FORM_EMAIL_REQUIRED###</em></label>
+    <input name="tx_wecservant[email]" type="text" size="40" value="###VALUE_EMAIL###"/>
+  </li>
+  <li>
+    <label>###FORM_PHONE###<em class="required">###FORM_PHONE_REQUIRED###</em></label>
+    <input name="tx_wecservant[phone]" type="text" size="40" value="###VALUE_PHONE###"/>
+  </li>
+  <li>
+    <label>###FORM_ADDRESS###<em class="required">###FORM_ADDRESS_REQUIRED###</em></label>
+    <input name="tx_wecservant[address]" type="text" size="40" value="###VALUE_ADDRESS###"/> 
+  </li>
+  <li>
+    <label>###FORM_CITY###<em class="required">###FORM_CITY_REQUIRED###</em></label>
+    <input name="tx_wecservant[city]" type="text" size="12" style="width:140px" value="###VALUE_CITY###"/>
+    ###FORM_STATE###
+    <input name="tx_wecservant[state]" type="text" size="4" style="width:40px" value="###VALUE_STATE###"/>
+    ###FORM_ZIP###
+    <input name="tx_wecservant[zip]" type="text" size="6" style="width:80px" value="###VALUE_ZIP###"/>
+  </li>
+  <li>
+    <label>###FORM_MESSAGE###<em class="required">###FORM_MESSAGE_REQUIRED###</em></label>
+    <textarea name="tx_wecservant[message]" cols="40" rows="5" wrap="virtual">###VALUE_MESSAGE###</textarea>
+  </li>
+  <li>
+    <label>###FORM_ATTACHMENT###<em class="required">###FORM_ATTACHMENT_REQUIRED###</em></label>
+    <input name="wecservant_attachment" type="file" size="30" value="###VALUE_ATTACHMENT###"/>
+  </li>
+  <li class="fullRow">
+    <input name="ForumReply" type="submit" value="###SUBMIT_BTN_TEXT###"/>
+    ###CANCEL_BTN### 
+  </li>
+  </ul>
+</fieldset>
+</form>
+<!-- ###TEMPLATE_SIGNUPFORM### end -->
+
+
+<!--
+=====================================================================================================
+###TEMPLATE_PREVIEW### begin
+
+ Template for a preview.
+=====================================================================================================
+-->
+<div class="preview">
+  <h3>###PREVIEW_TITLE###</h3>
+  <ul class="entries">
+  	###PREVIEW_ITEM_LIST###
+  </ul>
+  <div>###GO_BTN###</div>
+</div>
+<!-- ###TEMPLATE_PREVIEW### end -->
+
+<!-- ###PREVIEW_ITEM### begin -->
+<h4>###NAME###</h4>
+<li>###DESCRIPTION###</li>
+<!-- ###PREVIEW_ITEM### end -->
+
+
+<!--
+=====================================================================================================
+###TEMPLATE_ADMINMENU### begin
+=====================================================================================================
+-->
+
+<!-- ###ADMIN_HEADER### begin -->
+<div class="pluginContent">
+	###JAVASCRIPT_CODE###
+
+  	<h3>###ADMIN_MENU_TITLE###</h3>
+  	<div>###ADMIN_BACK_BTN###</div>
+  	<!-- ###SHOW_RESPONSE_MSG### begin--><div class="notice">###ADMIN_RESPONSE_MESSAGE###</div><!-- ###SHOW_RESPONSE_MSG### end-->
+<!-- ###ADMIN_HEADER### end -->
+<!-- ###ADMIN_FOOTER### begin -->
+</div>
+<!-- ###ADMIN_FOOTER### end -->
+
+
+<!-- ###ADMIN_FIND_MENU### begin -->
+
+  <form class="pluginForm" action="###ACTION_URL###" method="post">
+    <h3> FIND BY: </h3>
+    <span> Ministries:
+      <select name="selMinList" size="1" onChange="submit();">
+        <option value="0" selected>select...</option>
+  
+	    ###MINISTRY_LIST_OPTIONS###
+
+      </select>
+    </span>
+    <span> Last Updated:
+      <select name="selLastNumber" size="1" onChange="submit();">
+        <option value="0" selected>select #</option>
+        <option value="5">Last 5</option>
+        <option value="10">Last 10</option>
+        <option value="15">Last 15</option>
+        <option value="20">Last 20</option>
+        <option value="30">Last 30</option>
+      </select>
+    </span>
+    <span> Contact:
+      <select name="selContactList" size="1" onChange="submit();">
+        <option value="0" selected>select...</option>
+        
+	    ###CONTACT_LIST_OPTIONS###
+	    
+      </select>
+    </span>
+  </form>
+<!-- ###ADMIN_FIND_MENU### end -->
+
+<!-- ###ADMIN_FIND_MENU2### begin -->
+    <form class="pluginForm" action="###ACTION_URL###" method="post">
+      <h3>FIND BY:  Ministries:</h3>
+      <select name="selMinList" size="1" onChange="submit();">
+        <option value="0" selected>select...</option>
+
+	    ###MINISTRY_LIST_OPTIONS###
+      
+      </select>
+    </form>
+<!-- ###ADMIN_FIND_MENU2### end -->
+
+
+<!-- ###ADMIN_NEW_MENU### begin -->
+
+  <div class="pluginContent">
+	<a class="button" href="###ACTION_URL###&newopp=1"><span class="label addIcon">Create New Opportunity</span></a> 
+  	###ADMIN_STATS###
+  </div>
+
+<!-- ###ADMIN_NEW_MENU### end -->
+
+<!-- ###ADMIN_STATS_MENU### begin -->
+<div class="pluginContent">
+  <h3>ADMIN STATS MENU</h3>
+  <p> <a class="button" href="###ACTION_URL###?adminstats=2"><span class="label viewIcon">Show Monthly Count Stats</span></a> </p>
+  <p> <a class="button" href="###ACTION_URL###?adminstats=3"><span class="label viewIcon">Show Weekly Count Stats</span></a> </p>
+  <p> Show Active Ministry Opportunities <a class="button" href="###ACTION_URL###?adminstats=4"><span class="label">[past year]</span></a>&nbsp;&nbsp;<a class="button" href="###ACTION_URL###?adminstats=5"><span class="label">[past 3 months]</span></a>&nbsp;&nbsp;<a class="button" href="###ACTION_URL###?adminstats=6"><span class="label">[past month]</span></a> </p>
+  <p> Show Inactive Ministry Opportunities <a class="button" href="###ACTION_URL###?adminstats=11"><span class="label">[past year]</span></a>&nbsp;&nbsp;<a class="button" href="###ACTION_URL###?adminstats=12"><span class="label">[past 6 months]</span></a> </p>
+  <div> <a class="button" href="###ACTION_URL###?adminstats=9"><span class="label prevIcon">Exit Stats</span></a> </div>
+</div>
+<!-- ###ADMIN_STATS_MENU### end -->
+
+<!-- ###ADMIN_OPP_ITEM### begin -->
+<ul class="entry">
+  <li>Name: <b>###NAME###</b></li>
+  <li>Ministry: <b>###MINISTRY_INFO###</b></li>
+
+  <li>Contact: <b>###CONTACT_INFO###</b></li>
+ <li> Priority: <b>###PRIORITY###</b></li>
+  <li>Description: <b>###DESCRIPTION###</b></li>
+  <li>Location:<b>###LOCATION###</b></li>
+  <li>Times Needed:<b>###TIMES_NEEDED###</b></li>
+  <li class="buttonRow"><span>###EDIT_BTN###</span> <span>###DELETE_BTN###</span></li>
+</ul>
+<!-- ###ADMIN_OPP_ITEM### end -->
+
+
+<!-- ###ADMIN_OPP_FORM### begin -->
+  <h3> ###FORM_TITLE### </h3>
+    <form class="pluginForm" action="###ACTION_URL###" method="post">
+	<fieldset>
+	<ol>
+	 <li>
+       <label>###FORM_NAME###</label>
+        <input name="tx_wecservant[name]" type="text" value="###VALUE_NAME###" size="30" maxlength="50"/>
+     </li>
+     <li> 
+		 <label>###FORM_MINISTRY###</label>
+		 <div>###SELECT_MINISTRY### ###ADD_NEW_MINISTRY###</div> 
+		 ###TOGGLE_NEW_MINISTRY### 
+	 </li>
+     <li> 
+		 <label>###FORM_CONTACT###</label>
+		 <div>###SELECT_CONTACT### ###ADD_NEW_CONTACT###</div> 
+		 ###TOGGLE_NEW_CONTACT### 
+	 </li>
+     <li> 
+	 	<label>###FORM_DESCRIPTION###</label>
+     	<textarea name="tx_wecservant[description]" cols="40" rows="3" style="height:55px;" wrap="VIRTUAL">###VALUE_DESCRIPTION###</textarea>
+     </li>
+     <li>
+	  	<label>###FORM_LOCATION###</label>
+      	<input name="tx_wecservant[location]" type="text" value="###VALUE_LOCATION###" size="30" maxlength="50"/>
+     </li>
+     <li> 
+	  	<label>###FORM_TIMES_NEEDED###</label>
+      	<input name="tx_wecservant[times_needed]" type="text" value="###VALUE_TIMES_NEEDED###" size="30" maxlength="50"/>
+     </li>
+     <li>
+	  	<label>###FORM_PRIORITY###</label>
+	  	<div>###SELECT_PRIORITY###</div> 
+	 </li>
+     <li> 
+	  	<label>###FORM_QUALIFICATIONS###</label>
+      	<textarea name="tx_wecservant[qualifications]" cols="40" rows="2" style="height:40px;" wrap="VIRTUAL">###VALUE_QUALIFICATIONS###</textarea>
+	 </li>
+     <li> <label>###FORM_MISC_DESCRIPTION###</label>
+        <textarea name="tx_wecservant[misc_description]" cols="40" rows="2" style="height:40px;" wrap="VIRTUAL">###VALUE_MISC_DESCRIPTION###</textarea>
+     </li>
+	  
+      <!-- ###SHOW_SKILLS### begin -->
+     <li> 
+	  	<label>###FORM_SKILLS_NEEDED###</label> 
+		<div> 
+		    <div>#1:###SELECT_SKILLS1###&nbsp;&nbsp;# 2:###SELECT_SKILLS2###</div>
+	        <div>#3:###SELECT_SKILLS3###&nbsp;&nbsp;# 4:###SELECT_SKILLS4###</div>
+	        <div>#5:###SELECT_SKILLS5###&nbsp;&nbsp;# 6:###SELECT_SKILLS6###</div>
+	        <div>#7:###SELECT_SKILLS7###&nbsp;&nbsp;# 8:###SELECT_SKILLS8###</div>
+	        <div>#9:###SELECT_SKILLS9###&nbsp;&nbsp;#10:###SELECT_SKILLS10###</div>
+		</div> 
+	 </li>
+      <!-- ###SHOW_SKILLS### end -->
+	 <li class="buttonRow">
+	 	<span>###ADDEDIT_BUTTON###</span><span>###DELETE_BUTTON###</span><span>###BACK_BUTTON### </span>
+	 </li>
+	 </ol>
+     <div class="clearOnly"></div>
+      ###HIDDEN_VARS###
+    </fieldset>
+	</form>
+
+<!-- ###ADMIN_OPP_FORM### end -->
+
+
+<!-- ###ADMIN_MINISTRY_FORM### begin -->
+<div style="clear:both;width:100%;margin:0px auto;">
+  <div style="float:left;width:95%;text-align:center;font-size:120%;font-weight:bold;padding:6px;clear:both;"> ###FORM_TITLE###
+    <div style="font-size:100%;font-weight:normal;">###MAKE_NEW_CONTACT###</div>
+  </div>
+  <div class="pluginForm">
+    <form action="###ACTION_URL###" method="post">
+      <!-- ###MINISTRY_FORM_FIELDS### begin -->
+	  <li>
+		<label style="color:#999;">###FORM_MINISTRY_NAME###</label>
+        <input name="tx_wecservant[ministry_name]" type="text" value="###VALUE_NAME###" size="30" maxlength="50"/>
+	  </li>
+      <li> 
+		<label style="color:#999;">###FORM_MINISTRY_DESCRIPTION###</label>
+        <textarea name="tx_wecservant[ministry_description]" cols="35" rows="3" wrap="VIRTUAL" style="height:50px;">###VALUE_DESCRIPTION###</textarea>
+	  </li>
+      <!-- ###MINISTRY_FORM_FIELDS### end -->
+      <li> 
+		<label>###FORM_MINISTRY_PRIMARY_CONTACT###</label> 
+		###SELECT_CONTACT###
+	  </li>
+      <li> 
+		<label>###FORM_MIN_GROUP_TYPE###</label>
+		###SELECT_GROUP_TYPE###
+	  </li>
+	  <li>
+	  	<span>###ADDEDIT_BUTTON###</span>
+      	<span>###DELETE_BUTTON###</span> 
+      	###HIDDEN_VARS###
+	  </li>
+      ###HIDDEN_VARS###
+    </form>
+  </div>
+</div>
+<!-- ###ADMIN_MINISTRY_FORM### end -->
+
+
+<!-- ###ADMIN_CONTACT_FORM### begin -->
+  <h3> ###FORM_TITLE### </h3>
+    <form class="margin-left: 20px;" action="###ACTION_URL###" method="post">
+	 <fieldset>
+      <ol>
+      <!-- ###CONTACT_FORM_FIELDS### begin -->
+	  <li>
+	  	<label>###FORM_CONTACT_NAME###</label>
+        <input name="tx_wecservant[contact_name]" type="text" value="###VALUE_CONTACT_NAME###" size="30" maxlength="50"/>
+      </li>
+      <li> 
+	  	<label>###FORM_TELEPHONE###</label>
+        <input name="tx_wecservant[telephone]" type="text" value="###VALUE_TELEPHONE###" size="30" maxlength="50"/>
+      </li>
+      <li> 
+	  	<label>###FORM_EMAIL###</label>
+        <input name="tx_wecservant[email]" type="text" value="###VALUE_EMAIL###" size="30" maxlength="50"/>
+      </li>
+      <li> 
+	  	<label>###FORM_ADDRESS###</lable>
+      	<input name="tx_wecservant[address]" type="text" value="###VALUE_ADDRESS###" size="30" maxlength="50"/>
+      </li>
+      <li> 
+		<span>###FORM_CITY###</sapn> <span><input name="tx_wecservant[city]" type="text" value="###VALUE_CITY###" size="10" maxlength="30" style="width:140px"/></span>
+	    <span>###FORM_ZONE###</span><span><input name="tx_wecservant[zone]" type="text" value="###VALUE_ZONE###" size="4" maxlength="10" style="width:40px"/></span>
+	    <span>###FORM_ZIP###</span><span><input name="tx_wecservant[zip]" type="text" value="###VALUE_ZIP###" size="6" maxlength="10" style="width:80px"/></span>
+	  </li>
+	  <li>
+	  	<span>###ADDEDIT_BUTTON###</span>
+      	<span>###DELETE_BUTTON###</span> 
+      	###HIDDEN_VARS###
+	  </li>
+      <!-- ###CONTACT_FORM_FIELDS### end -->
+	  </ol>
+	 </fieldset>
+    </form>
+
+<!-- ###ADMIN_CONTACT_FORM### end -->
+<!-- ###ADMIN_SKILLS_FORM### begin -->
+<div style="clear:both;width:100%;margin:0px auto;">
+  <div style="float:left;width:600px;text-align:center;font-size:120%;font-weight:bold;padding:6px;clear:both;"> ###FORM_TITLE###
+    <div style="font-size:100%;font-weight:normal;">###MAKE_NEW_SKILL###</div>
+  </div>
+  <div class="pluginForm">
+    <form action="###ACTION_URL###" method="post">
+      <!-- ###SKILLS_FORM_FIELDS### begin -->
+      <div class="inputFormRow"> <span class="label">###FORM_SKILLS_NAME###</span><span class="inputBox">
+        <input name="tx_wecservant[skills_name]" type="text" value="###VALUE_NAME###" size="30" maxlength="50"/>
+        </span> </div>
+      <div class="inputFormRow"> <span class="label">###FORM_SKILLS_DESCRIPTION###</span><span class="inputBox">
+        <textarea name="tx_wecservant[skills_description]" cols="40" rows="2" wrap="VIRTUAL"  style="height:50px;">###VALUE_DESCRIPTION###</textarea>
+        </span> </div>
+      <div class="inputFormRow"> <span class="label">###FORM_SKILLS_GROUPBY###</span><span class="inputBox">
+        <input name="tx_wecservant[skills_groupby]" type="text" value="###VALUE_GROUPBY###" size="30" maxlength="50"/>
+        </span> </div>
+      <!-- ###SKILLS_FORM_FIELDS### end -->
+      <div class="inputFormRow" style="padding-top:8px;padding-bottom:8px;"> <span class="textAcross"> ###ADDEDIT_BUTTON###
+        ###DELETE_BUTTON### </span> </div>
+      ###HIDDEN_VARS###
+    </form>
+  </div>
+</div>
+<!-- ###ADMIN_SKILLS_FORM### end -->
+<!-- ###TEMPLATE_ADMINMENU### end -->

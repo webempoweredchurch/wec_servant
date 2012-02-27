@@ -1,0 +1,23 @@
+plugin.tx_wecservant_pi1 {
+# cat=plugin.tx_wecservant_pi1/file/1; type=file[html,htm,tmpl,txt]; label= Template File: HTML template file for display of the Discussion Forum.
+  templateFile 	= EXT:wec_servant/template/wecservant.tmpl
+
+# cat=plugin.tx_wecservant_pi1/file/2; type=file[css]; label= base plugin CSS File
+  baseCSSFile 	= EXT:wec_servant/template/pluginstyles.css
+
+# cat=plugin.tx_wecservant_pi1/file/2; type=file[css]; label= Servant CSS File
+  cssFile 		= EXT:wec_servant/template/wecservant.css
+
+#cat=plugin.tx_wecservant_pi1/misc/2a; type=string; label= Email Substitute For @
+  emailAtSubstitute	= &#064;
+
+#cat=plugin.tx_wecservant_pi1/misc/1a; type=string; label= Maximum # To Display
+  maxMatchesToShow	= 250
+
+#cat=plugin.tx_wecservant_pi1/file/2; type=int+; label= Staff Directory Page ID # (if want linked)
+  staffDirectoryPage =
+
+#cat=plugin.tx_wecservant_pi1/file/9a; type=int+; label= Can just view ministry opportunities (not select), by adding name or 'all' to list all
+  viewMinistryOpps =
+
+}

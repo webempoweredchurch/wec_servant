@@ -1,0 +1,507 @@
+<!--
+	Templates For The wec_servant extension:
+
+		###TEMPLATE_PAGE		-- the main page
+		###TEMPLATE_DISPLAYITEM -- for one posted opportunity
+		###TEMPLATE_SIGNUPFORM 	-- the form for signing up for an opportunity
+		###TEMPLATE_PREVIEW		-- the look for a preview
+		###TEMPLATE_ADMINMENU	-- the forms for the admin menu
+-->
+
+<!--
+=====================================================================================================
+###TEMPLATE_PAGE### begin
+=====================================================================================================
+-->
+<div class="tx-wecservant-content pluginContent">
+###JAVASCRIPT_CODE###
+
+	<div class="tx-wecservant-section">
+		<!-- ###SHOW_TITLE### begin -->
+		<div class="tx-wecservant-title">
+			###TITLE###
+			###HEADER_TEXT###
+		</div>
+		<!-- ###SHOW_TITLE### end -->
+		<div class="tx-wecservant-actionbar">###VIEW_SAVED_MINOPPS_LINK### ###PRINT_SAVED_MINOPPS_LINK### ###PRINT_BUTTON### ###ADMIN_LINK###</div>
+		<div class="tx-wecservant-responseMsg">###RESPONSE_MSG_TEXT###</div>
+	</div>
+	
+	<!-- ###SHOW_HEADER### begin -->	
+	<div class="tx-wecservant-header">
+		<div class="tx-wecservant-headerSec"><div>###FIND_BY_MINISTRY_HEADER###</div><div>###FIND_BY_MINISTRY###</div></div>
+		<div class="tx-wecservant-headerSec"><div>###FIND_BY_NEEDS_HEADER###</div><div>###FIND_BY_NEEDS###</div></div>
+		<div class="tx-wecservant-headerSec"><div>###FIND_BY_LASTADDED_HEADER###</div><div>###FIND_BY_LASTADDED###</div></div>
+	</div>
+	<!-- ###SHOW_HEADER### end -->
+	
+	<!-- ###SHOW_FIND_MINISTRIES### begin -->
+	<div class="tx-wecservant-section">
+		<div class="tx-wecservant-header">###FIND_BY_MINISTRIES_HEADER###</div>
+		###TOGGLE_FIND_MINISTRIES###
+		<div class="tx-wecservant-selectmenu">###FIND_BY_MINISTRIES###</div>
+		###TOGGLE_FIND_MINISTRIES_OFF###
+	</div>
+	<!-- ###SHOW_FIND_MINISTRIES### end -->
+
+	<!-- ###SHOW_FIND_SKILLS### begin -->
+	<div class="tx-wecservant-section">
+		<div class="tx-wecservant-header">###FIND_BY_SKILLS_HEADER###</div>
+		###TOGGLE_FIND_SKILLS###
+		<div class="tx-wecservant-selectmenu">###FIND_BY_SKILLS###</div>
+		###TOGGLE_FIND_SKILLS_OFF###
+	</div>
+	<!-- ###SHOW_FIND_SKILLS### begin -->
+
+	<div class="tx-wecservant-section">
+		###DISPLAY_RESULTS_HEADER###
+		###DISPLAY_RESULTS###
+		<!-- ###SHOW_BOTTOM_BUTTONS### begin -->
+			<div class="bottomRow">
+				###BOTTOM_BUTTONS_CODE###
+				###SAVE_SEL_BTN### ###CLEAR_SEL_BTN### ###SELECT_ALL_BTN###
+			</div>
+		<!-- ###SHOW_BOTTOM_BUTTONS### end -->
+		###SIGNUP_BTN### ###COMMITMENT_BTN###
+	</div>
+</div>
+<div class="spacer">&nbsp;</div>
+
+<!-- ###TEMPLATE_PAGE### end -->
+
+
+<!--
+=====================================================================================================
+###TEMPLATE_DISPLAYITEM### begin
+
+ Template for a single item. This is repeated for each item
+=====================================================================================================
+-->
+    <div class="tx-wecservant-displayItem" style="###ITEM_EVENODD_DISPLAY###">
+   		<div class="row"><span class="header">###NAME###</span></div>
+   		<div class="row" ###SHOW_MINISTRY_INFO###><span class="label">###ITEMLABEL_MINISTRY_INFO###</span><span class="description">###MINISTRY_INFO###</span></div>
+		<div class="row" ###SHOW_DESCRIPTION###><span class="label">###ITEMLABEL_DESCRIPTION###</span><span class="description">###DESCRIPTION###</span></div>
+		<div class="row" ###SHOW_PRIORITY###><span class="label">###ITEMLABEL_PRIORITY###</span><span class="description">###PRIORITY###</span></div>
+
+	###TOGGLE_ITEM###
+		<div class="row" ###SHOW_LOCATION###><span class="label">###ITEMLABEL_LOCATION###</span><span class="description">###LOCATION###</span></div>
+		<div class="row" ###SHOW_TIMES_NEEDED###><span class="label">###ITEMLABEL_TIMES_NEEDED###</span><span class="description">###TIMES_NEEDED###</span></div>
+		<div class="row" ###SHOW_MISC_DESCRIPTION###><span class="label">###ITEMLABEL_MISC_DESCRIPTION###</span><span class="description">###MISC_DESCRIPTION###</span></div>
+		<div class="row" ###SHOW_QUALIFICATIONS###><span class="label">###ITEMLABEL_QUALIFICATIONS###</span><span class="description">###QUALIFICATIONS###</span></div>
+		<div class="row" ###SHOW_SKILLS###><span class="label">###ITEMLABEL_SKILLS###</span><span class="description">###SKILLS###</span></div>
+   		<div class="row" ###SHOW_CONTACT_INFO###><span class="label">###ITEMLABEL_CONTACT_INFO###</span><span class="description">###CONTACT_INFO###</span><span style="margin-left:10px;">###CONTACT_STAFF_LINK###</span> </div>
+   		<div class="row" ###SHOW_CONTACT_PHONE###><span class="label">###ITEMLABEL_CONTACT_PHONE###</span><span class="description">###CONTACT_PHONE###</span></div>
+   		<div class="row" ###SHOW_CONTACT_EMAIL###><span class="label">###ITEMLABEL_CONTACT_EMAIL###</span><span class="description">###CONTACT_EMAIL###</span></div>
+		<div class="row" ###SHOW_CONTACT_STAFFLINK###><span class="label">###ITEMLABEL_CONTACT_STAFFLINK###</span><span class="description">###CONTACT_STAFFLINK###</span></div>
+	###TOGGLE_ITEM_END###
+
+		<div class="tx-wecservant-itembuttons">###EDIT_BTN### ###SIGNUP_BTN### ###COMMITMENT_BTN### ###VIEW_SINGLE### ###SAVE_ITEM###</div>
+		<div class="spacer">&nbsp;</div>
+	</div>
+<!-- ###TEMPLATE_DISPLAYITEM### end -->
+
+<!--
+=====================================================================================================
+###TEMPLATE_SINGLE### begin
+
+ Template for a single view.
+=====================================================================================================
+-->
+    <div class="tx-wecservant-displayItem" style="###ITEM_EVENODD_DISPLAY###">
+   		<div class="row"><span class="header">###NAME###</span></div>
+   		<div class="row" ###SHOW_MINISTRY_INFO###><span class="label">###ITEMLABEL_MINISTRY_INFO###</span><span class="description">###MINISTRY_INFO###</span></div>
+		<div class="row" ###SHOW_DESCRIPTION###><span class="label">###ITEMLABEL_DESCRIPTION###</span><span class="description">###DESCRIPTION###</span></div>
+		<div class="row" ###SHOW_PRIORITY###><span class="label">###ITEMLABEL_PRIORITY###</span><span class="description">###PRIORITY###</span></div>
+		<div class="row" ###SHOW_LOCATION###><span class="label">###ITEMLABEL_LOCATION###</span><span class="description">###LOCATION###</span></div>
+		<div class="row" ###SHOW_TIMES_NEEDED###><span class="label">###ITEMLABEL_TIMES_NEEDED###</span><span class="description">###TIMES_NEEDED###</span></div>
+		<div class="row" ###SHOW_MISC_DESCRIPTION###><span class="label">###ITEMLABEL_MISC_DESCRIPTION###</span><span class="description">###MISC_DESCRIPTION###</span></div>
+		<div class="row" ###SHOW_QUALIFICATIONS###><span class="label">###ITEMLABEL_QUALIFICATIONS###</span><span class="description">###QUALIFICATIONS###</span></div>
+		<div class="row" ###SHOW_SKILLS###><span class="label">###ITEMLABEL_SKILLS###</span><span class="description">###SKILLS###</span></div>
+   		<div class="row" ###SHOW_CONTACT_INFO###><span class="label">###ITEMLABEL_CONTACT_INFO###</span><span class="description">###CONTACT_INFO###</span></div>
+   		<div class="row" ###SHOW_CONTACT_PHONE###><span class="label">###ITEMLABEL_CONTACT_PHONE###</span><span class="description">###CONTACT_PHONE###</span></div>
+   		<div class="row" ###SHOW_CONTACT_EMAIL###><span class="label">###ITEMLABEL_CONTACT_EMAIL###</span><span class="description">###CONTACT_EMAIL###</span></div>
+
+		<div class="tx-wecservant-itembuttons">###EDIT_BTN### ###SIGNUP_BTN### ###COMMITMENT_BTN### ###SAVE_ITEM###</div>
+		<div class="spacer">&nbsp;</div>
+
+	</div>
+<!-- ###TEMPLATE_SINGLE### end -->
+
+<!--
+=====================================================================================================
+###TEMPLATE_SIGNUPFORM### begin
+=====================================================================================================
+   Form to signup (show interest or make commitment)
+
+-->
+	<a name="typeYourMessage"></a>
+	<div style="text-align:center;">
+		<div class="tx-wecservant-form">
+		<form name="forumReplyForm" method="post" action="###ACTION_URL###"  enctype="multipart/form-data">
+			###HIDDEN_VARS###
+		    <div class="inputFormRow">
+		    	<span class="textacross">
+		    		<div class="isBold font-lg">###FORM_HEADER###</div>
+		    		<div class="isBold font-med errorColor">###FORM_ERROR###</div>
+		    		<div class="isBold font-med noticeColor">###SIGNUP_TEXT###</div>
+		    		<div class="isBold font-med">###SIGNUP_INSTRUCTIONS###</div>
+		    		<div class="isBold font-sm reqTextColor">###SHOW_REQUIRED_TEXT###</div>
+		    	</span>
+	    	</div>
+    	    <!-- ###SHOW_NAME### begin -->
+		    <div class="inputFormRow">
+		    	<span class="label">###FORM_NAME###<span class="tx-wecservant-form-requiredMarker">###FORM_NAME_REQUIRED###</span></span>
+		    	<span class="inputBox"><input name="tx_wecservant[name]" type="text" size="40" value="###VALUE_NAME###"/>&nbsp;&nbsp;</span>
+		    </div>
+		    <!-- ###SHOW_NAME### end -->
+		    <!-- ###SHOW_EMAIL### begin -->
+		    <div class="inputFormRow">
+		    	<span class="label">###FORM_EMAIL###<span class="tx-wecservant-form-requiredMarker">###FORM_EMAIL_REQUIRED###</span></span>
+		    	<span class="inputBox"><input name="tx_wecservant[email]" type="text" size="40" value="###VALUE_EMAIL###"/>&nbsp;&nbsp;</span>
+		    </div>
+		    <!-- ###SHOW_EMAIL### end -->
+		    <!-- ###SHOW_PHONE### begin -->
+		    <div class="inputFormRow">
+		    	<span class="label">###FORM_PHONE###<span class="tx-wecservant-form-requiredMarker">###FORM_PHONE_REQUIRED###</span></span>
+		    	<span class="inputBox"><input name="tx_wecservant[phone]" type="text" size="40" value="###VALUE_PHONE###"/>&nbsp;&nbsp;</span>
+		    </div>
+		    <!-- ###SHOW_PHONE### end -->
+		    <!-- ###SHOW_ADDRESS### begin -->
+		    <div class="inputFormRow">
+		    	<span class="label">###FORM_ADDRESS###<span class="tx-wecservant-form-requiredMarker">###FORM_ADDRESS_REQUIRED###</span></span>
+		    	<span class="inputBox"><input name="tx_wecservant[address]" type="text" size="40" value="###VALUE_ADDRESS###"/>&nbsp;&nbsp;</span>
+		    </div>
+		    <div class="inputFormRow">
+		    	<span class="label">###FORM_CITY###<span class="tx-wecservant-form-requiredMarker">###FORM_CITY_REQUIRED###</span></span>
+		    	<span class="inputBox">
+		    		<input name="tx_wecservant[city]" type="text" size="12" style="width:140px" value="###VALUE_CITY###"/>&nbsp;&nbsp;
+		    		###FORM_STATE###
+		    		<input name="tx_wecservant[state]" type="text" size="4" style="width:40px" value="###VALUE_STATE###"/>&nbsp;&nbsp;
+		    		###FORM_ZIP###
+		    		<input name="tx_wecservant[zip]" type="text" size="6" style="width:80px" value="###VALUE_ZIP###"/>&nbsp;&nbsp;
+	    		</span>
+		    </div>
+		    <!-- ###SHOW_ADDRESS### end -->
+		    <!-- ###SHOW_MESSAGE### begin -->
+		    <div class="inputFormRow">
+		    	<span class="label">###FORM_MESSAGE###<span class="tx-wecservant-form-requiredMarker">###FORM_MESSAGE_REQUIRED###</span></span>
+		    	<span class="inputBox"><textarea name="tx_wecservant[message]" cols="40" rows="5" wrap="virtual">###VALUE_MESSAGE###</textarea></span>
+		    </div>
+			<!-- ###SHOW_MESSAGE### end -->
+		    <!-- ###SHOW_ATTACHMENT### begin -->
+		    <div class="inputFormRow">
+		    	<span class="label">###FORM_ATTACHMENT###<span class="tx-wecservant-form-requiredMarker">###FORM_ATTACHMENT_REQUIRED###</span></span>
+		    	<span class="inputBox"><input name="wecservant_attachment" type="file" size="30" value="###VALUE_ATTACHMENT###"/></span>
+		    </div>
+			<!-- ###SHOW_ATTACHMENT### end -->
+
+		    <div class="inputFormRow">
+		    	<span class="textacross"><input name="ForumReply" type="submit" value="###SUBMIT_BTN_TEXT###"/> ###CANCEL_BTN###</span>
+		    </div>
+
+		    <div class="tx-wecservant-spacer">&nbsp;</div>
+		</form>
+		</div>
+	</div>
+<!-- ###TEMPLATE_SIGNUPFORM### end -->
+
+<!--
+=====================================================================================================
+###TEMPLATE_PREVIEW### begin
+
+ Template for a preview.
+=====================================================================================================
+-->
+<div class="tx-wecservant-preview">
+	<div class="tx-wecservant-preview-title">###PREVIEW_TITLE###</div>
+
+	###PREVIEW_ITEM_LIST###
+
+	<div class="centered">###GO_BTN###</div>
+
+</div>
+<!-- ###TEMPLATE_PREVIEW### end -->
+
+<!-- ###PREVIEW_ITEM### begin -->
+<div class="tx-wecservant-preview-item">
+	<span class="isBold">###NAME###</span> -- <span>###DESCRIPTION###</span>
+</div>
+<!-- ###PREVIEW_ITEM### end -->
+
+
+<!--
+=====================================================================================================
+###TEMPLATE_ADMINMENU### begin
+=====================================================================================================
+-->
+<!-- ###ADMIN_HEADER### begin -->
+###JAVASCRIPT_CODE###
+<div class="tx-wecservant-form">
+<div class="font-lg floatleft isBold isCenter pad">###ADMIN_MENU_TITLE###</div>
+<div class="floatright pad isCenter">###ADMIN_BACK_BTN###</div>
+<div style="isBold isCenter pad" style="color:#F22;">###ADMIN_RESPONSE_MESSAGE###</div>
+<!-- ###ADMIN_HEADER### end -->
+
+<!-- ###ADMIN_FOOTER### begin -->
+</div>
+
+<!-- ###ADMIN_FOOTER### end -->
+
+<!-- ###ADMIN_FIND_MENU### begin -->
+<div style="float:left;width:100%;font-size:105%;">
+   <form action="###ACTION_URL###" method="post">
+	 <div style="float:left;height:30px;padding-top:10px;"> FIND BY: </div>
+	 <div style="float:left;margin-left:10px;">
+	  Ministries:
+	  <select name="selMinList" size="1" onchange="submit();">
+	    <option value="0" selected>select...</option>
+	    ###MINISTRY_LIST_OPTIONS###
+	    </select>
+	 </div>
+	 <div style="float:left;margin-left:10px;">
+	  Last Updated:
+	  <select name="selLastNumber" size="1" onchange="submit();">
+	    <option value="0" selected>select #</option>
+	    <option value="5">Last 5</option>
+	    <option value="10">Last 10</option>
+	    <option value="15">Last 15</option>
+	    <option value="20">Last 20</option>
+	    <option value="30">Last 30</option>
+       </select>
+      </div>
+	 <div style="float:left;margin-left:10px;margin-top:5px;">
+	  Contact:
+	  <select name="selContactList" size="1" onchange="submit();">
+	    <option value="0" selected>select...</option>
+	    ###CONTACT_LIST_OPTIONS###
+	    </select>
+	 </div>
+	</form>
+</div>
+<!-- ###ADMIN_FIND_MENU### end -->
+
+<!-- ###ADMIN_FIND_MENU2### begin -->
+<div style="width:100%; height:24px;">
+  <div style="float:left;font-size:110%;">
+	 <form action="###ACTION_URL###" method="post">
+	  FIND BY:  Ministries:
+	  <select name="selMinList" size="1" onchange="submit();">
+	    <option value="0" selected>select...</option>
+	    ###MINISTRY_LIST_OPTIONS###
+	  </select>
+	</form>
+  </div>
+</div>
+<!-- ###ADMIN_FIND_MENU2### end -->
+
+<!-- ###ADMIN_NEW_MENU### begin -->
+<div style="width:100%;height:16px;margin-top:4px;">
+  <div style="float:left;font-size:110%;padding-bottom:4px;">CREATE:</div>
+  <div style="float:left;font-size:110%;padding-left:5px;">
+  	<a href="###ACTION_URL###&newopp=1">New Opportunity</a>
+  </div>
+  <div style="float:right;padding-right:6px;">###ADMIN_STATS###</div>
+</div>
+<!-- ###ADMIN_NEW_MENU### end -->
+
+<!-- ###ADMIN_STATS_MENU### begin -->
+<div style="width:100%;margin:4px;">
+  <div style="font-size:125%;font-weight:bold">ADMIN STATS MENU</div>
+  <div style="font-size:110%;padding:4px;">
+	  	<a href="###ACTION_URL###?adminstats=2">Show Monthly Count Stats</a>
+  </div>
+  <div style="font-size:110%;padding:4px;">
+	  	<a href="###ACTION_URL###?adminstats=3">Show Weekly Count Stats</a>
+  </div>
+  <div style="font-size:110%;padding:4px;">
+	  	Show Active Ministry Opportunities <a href="###ACTION_URL###?adminstats=4">[past year]</a>&nbsp;&nbsp;<a href="###ACTION_URL###?adminstats=5">[past 3 months]</a>&nbsp;&nbsp;<a href="###ACTION_URL###?adminstats=6">[past month]</a>&nbsp;&nbsp;<a href="###ACTION_URL###?adminstats=7">[past - all]</a
+  </div>
+  <div style="font-size:110%;padding:4px;">
+	  	Show Inactive Ministry Opportunities <a href="###ACTION_URL###?adminstats=11">[past year]</a>&nbsp;&nbsp;<a href="###ACTION_URL###?adminstats=12">[past 6 months]&nbsp;&nbsp;<a href="###ACTION_URL###?adminstats=13">[past - all]</a>
+  </div>
+  <div style="font-size:110%;padding:4px;">
+	  	<a href="###ACTION_URL###?adminstats=9">Exit Stats</a>
+  </div>
+</div>
+<!-- ###ADMIN_STATS_MENU### end -->
+
+<!-- ###ADMIN_OPP_ITEM### begin -->
+  <div style="float:left;width:80%;">
+		<div style="font-size:100%;"><span style="padding-right:20px;">Name: <b>###NAME###</b></span><span style="padding-right:20px;">Ministry: <b>###MINISTRY_INFO###</b></span></div>
+		<div style="font-size:100%;"><span style="padding-right:20px;">Contact: <b>###CONTACT_INFO###</b></span> <span>Priority: <b>###PRIORITY###</b></span></div>
+		<div style="font-size:100%;">Description: <i>###DESCRIPTION###</i></div>
+		<div style="font-size:100%;padding-bottom:12px;">Location:<b>###LOCATION###</b><span style="padding-left:20px;">Times Needed:<b>###TIMES_NEEDED###</b></span></div>
+  </div>
+  <div style="float:right;width:18%;font-size:85%;text-align:center;">###EDIT_BTN### ###DELETE_BTN###</div>
+<!-- ###ADMIN_OPP_ITEM### end -->
+
+<!-- ###ADMIN_OPP_FORM### begin -->
+<div style="clear:both;width:100%;padding:0px;margin:0px auto;">
+	<div style="float:left;width:90%;text-align:center;font-size:120%;font-weight:bold;padding:6px;clear:both;">
+		###FORM_TITLE###
+	</div>
+	<div class="tx-wecservant-form" style="border:0px;">
+	  <form action="###ACTION_URL###" method="post">
+	    <div class="inputFormRow">
+		    <span class="label">###FORM_NAME###</span><span class="inputBox"><input name="tx_wecservant[name]" type="text" value="###VALUE_NAME###" size="30" maxlength="50"/></span>
+		</div>
+	    <div class="inputFormRow">
+			<span class="label">###FORM_MINISTRY###</span><span class="inputBox">###SELECT_MINISTRY### ###ADD_NEW_MINISTRY###</span>
+			###TOGGLE_NEW_MINISTRY###
+		</div>
+	    <div class="inputFormRow">
+	    	<span class="label">###FORM_CONTACT###</span><span class="inputBox">###SELECT_CONTACT### ###ADD_NEW_CONTACT###</span>
+			###TOGGLE_NEW_CONTACT###
+		</div>
+	    <div class="inputFormRow">
+	    	<span class="label">###FORM_DESCRIPTION###</span><span class="inputBox"><textarea name="tx_wecservant[description]" cols="40" rows="3" style="height:55px;" wrap="VIRTUAL">###VALUE_DESCRIPTION###</textarea></span>
+		</div>
+	    <div class="inputFormRow">
+	    	<span class="label">###FORM_LOCATION###</span><span class="inputBox"><input name="tx_wecservant[location]" type="text" value="###VALUE_LOCATION###" size="30" maxlength="50"/></span>
+		</div>
+	    <div class="inputFormRow">
+	    	<span class="label">###FORM_TIMES_NEEDED###</span><span class="inputBox"><input name="tx_wecservant[times_needed]" type="text" value="###VALUE_TIMES_NEEDED###" size="30" maxlength="50"/></span>
+		</div>
+	    <div class="inputFormRow">
+	    	<span class="label">###FORM_PRIORITY###</span><span class="inputBox" style="float:right;">###SELECT_PRIORITY###</span>
+		</div>
+	    <div class="inputFormRow">
+	    	<span class="label">###FORM_QUALIFICATIONS###</span><span class="inputBox"><textarea name="tx_wecservant[qualifications]" cols="40" rows="2" style="height:40px;" wrap="VIRTUAL">###VALUE_QUALIFICATIONS###</textarea></span>
+		</div>
+	    <div class="inputFormRow">
+	    	<span class="label">###FORM_MISC_DESCRIPTION###</span><span class="inputBox"><textarea name="tx_wecservant[misc_description]" cols="40" rows="2" style="height:40px;" wrap="VIRTUAL">###VALUE_MISC_DESCRIPTION###</textarea></span>
+		</div>
+	<!-- ###SHOW_SKILLS### begin -->
+	    <div class="inputFormRow">
+			<span class="label">###FORM_SKILLS_NEEDED###</span>
+			<span class="inputBox" style="font-size:90%;">
+				#1:###SELECT_SKILLS1###&nbsp;&nbsp;# 2:###SELECT_SKILLS2###<br>
+				#3:###SELECT_SKILLS3###&nbsp;&nbsp;# 4:###SELECT_SKILLS4###<br>
+				#5:###SELECT_SKILLS5###&nbsp;&nbsp;# 6:###SELECT_SKILLS6###<br>
+				#7:###SELECT_SKILLS7###&nbsp;&nbsp;# 8:###SELECT_SKILLS8###<br>
+				#9:###SELECT_SKILLS9###&nbsp;&nbsp;#10:###SELECT_SKILLS10###
+			</span>
+		</div>
+	<!-- ###SHOW_SKILLS### end -->
+	    <div class="inputFormRow" style="padding-top:8px;">
+    		<span class="textacross">
+    			###ADDEDIT_BUTTON###
+    			###DELETE_BUTTON###
+    			###BACK_BUTTON###
+    		</span>
+		</div>
+		<div class="spacer">&nbsp;</div>
+		###HIDDEN_VARS###
+	 </form>
+  </div>
+</div>
+<!-- ###ADMIN_OPP_FORM### end -->
+
+<!-- ###ADMIN_MINISTRY_FORM### begin -->
+<div style="clear:both;width:100%;margin:0px auto;">
+	<div style="float:left;width:95%;text-align:center;font-size:120%;font-weight:bold;padding:6px;clear:both;">
+		###FORM_TITLE###
+		<div style="font-size:100%;font-weight:normal;">###MAKE_NEW_CONTACT###</div>
+	</div>
+	<div class="tx-wecservant-form">
+	  <form action="###ACTION_URL###" method="post">
+	<!-- ###MINISTRY_FORM_FIELDS### begin -->
+	    <div class="inputFormRow">
+		    <span class="label" style="color:#999;">###FORM_MINISTRY_NAME###</span><span class="inputBox"><input name="tx_wecservant[ministry_name]" type="text" value="###VALUE_NAME###" size="30" maxlength="50"/></span>
+		</div>
+	    <div class="inputFormRow">
+		    <span class="label" style="color:#999;">###FORM_MINISTRY_DESCRIPTION###</span><span class="inputBox"><textarea name="tx_wecservant[ministry_description]" cols="35" rows="3" wrap="VIRTUAL" style="height:50px;">###VALUE_DESCRIPTION###</textarea></span>
+		</div>
+	<!-- ###MINISTRY_FORM_FIELDS### end -->
+	    <div class="inputFormRow">
+		    <span class="label">###FORM_MINISTRY_PRIMARY_CONTACT###</span>
+		    <span class="inputBox">###SELECT_CONTACT###</span>
+		</div>
+	    <div class="inputFormRow">
+		    <span class="label">###FORM_MIN_GROUP_TYPE###</span><span class="inputBox">###SELECT_GROUP_TYPE###</span>
+		</div>
+	    <div class="inputFormRow" style="padding-top:8px;padding-bottom:8px;">
+    		<span class="textAcross">
+    			###ADDEDIT_BUTTON###
+    			###DELETE_BUTTON###
+    		</span>
+		</div>
+		###HIDDEN_VARS###
+	 </form>
+  </div>
+</div>
+<!-- ###ADMIN_MINISTRY_FORM### end -->
+
+<!-- ###ADMIN_CONTACT_FORM### begin -->
+<div style="clear:both;width:100%;margin:0px auto;">
+	<div style="float:left;width:95%;text-align:center;font-size:120%;font-weight:bold;padding:6px;clear:both;">
+		###FORM_TITLE###
+	</div>
+	<div class="tx-wecservant-form">
+	  <form action="###ACTION_URL###" method="post">
+	<!-- ###CONTACT_FORM_FIELDS### begin -->
+	    <div class="inputFormRow">
+		    <span class="label"  style="color:#999;">###FORM_CONTACT_NAME###</span><span class="inputBox"><input name="tx_wecservant[contact_name]" type="text" value="###VALUE_CONTACT_NAME###" size="30" maxlength="50"/></span>
+		</div>
+	    <div class="inputFormRow">
+		    <span class="label" style="color:#999;">###FORM_TELEPHONE###</span><span class="inputBox"><input name="tx_wecservant[telephone]" type="text" value="###VALUE_TELEPHONE###" size="30" maxlength="50"/></span>
+		</div>
+	    <div class="inputFormRow">
+		    <span class="label" style="color:#999;">###FORM_EMAIL###</span><span class="inputBox"><input name="tx_wecservant[email]" type="text" value="###VALUE_EMAIL###" size="30" maxlength="50"/></span>
+		</div>
+	    <div class="inputFormRow">
+		    <span class="label" style="color:#999;">###FORM_ADDRESS###</span><span class="inputBox"><input name="tx_wecservant[address]" type="text" value="###VALUE_ADDRESS###" size="30" maxlength="50"/></span>
+		</div>
+	    <div class="inputFormRow">
+		    <span class="label" style="color:#999;">###FORM_CITY###</span>
+		    <span class="inputBox">
+		    	<input name="tx_wecservant[city]" type="text" value="###VALUE_CITY###" size="10" maxlength="30" style="width:140px"/>
+		    	<span style="width:60px;padding-left:10px;padding-right:4px;color:#999;">###FORM_ZONE###</span><span style="width:80px"><input name="tx_wecservant[zone]" type="text" value="###VALUE_ZONE###" size="4" maxlength="10" style="width:40px"/></span>
+		    	<span style="width:80px;padding-left:10px;padding-right:4px;color:#999;">###FORM_ZIP###</span><span style="width:80px"><input name="tx_wecservant[zip]" type="text" value="###VALUE_ZIP###" size="6" maxlength="10" style="width:80px"/></span>
+		    </span>
+		</div>
+	<!-- ###CONTACT_FORM_FIELDS### end -->
+	    <div class="inputFormRow" style="padding-top:8px;padding-bottom:8px;">
+    		<span class="textAcross">
+    			###ADDEDIT_BUTTON###
+    			###DELETE_BUTTON###
+    		</span>
+		</div>
+		###HIDDEN_VARS###
+	 </form>
+  </div>
+</div>
+<!-- ###ADMIN_CONTACT_FORM### end -->
+
+<!-- ###ADMIN_SKILLS_FORM### begin -->
+<div style="clear:both;width:100%;margin:0px auto;">
+	<div style="float:left;width:600px;text-align:center;font-size:120%;font-weight:bold;padding:6px;clear:both;">
+		###FORM_TITLE###
+		<div style="font-size:100%;font-weight:normal;">###MAKE_NEW_SKILL###</div>
+	</div>
+	<div class="tx-wecservant-form">
+	  <form action="###ACTION_URL###" method="post">
+	<!-- ###SKILLS_FORM_FIELDS### begin -->
+	    <div class="inputFormRow">
+		    <span class="label">###FORM_SKILLS_NAME###</span><span class="inputBox"><input name="tx_wecservant[skills_name]" type="text" value="###VALUE_NAME###" size="30" maxlength="50"/></span>
+		</div>
+	    <div class="inputFormRow">
+		    <span class="label">###FORM_SKILLS_DESCRIPTION###</span><span class="inputBox"><textarea name="tx_wecservant[skills_description]" cols="40" rows="2" wrap="VIRTUAL"  style="height:50px;">###VALUE_DESCRIPTION###</textarea></span>
+		</div>
+	    <div class="inputFormRow">
+		    <span class="label">###FORM_SKILLS_GROUPBY###</span><span class="inputBox"><input name="tx_wecservant[skills_groupby]" type="text" value="###VALUE_GROUPBY###" size="30" maxlength="50"/></span>
+		</div>
+	<!-- ###SKILLS_FORM_FIELDS### end -->
+	    <div class="inputFormRow" style="padding-top:8px;padding-bottom:8px;">
+    		<span class="textAcross">
+    			###ADDEDIT_BUTTON###
+    			###DELETE_BUTTON###
+    		</span>
+		</div>
+		###HIDDEN_VARS###
+	 </form>
+  </div>
+</div>
+<!-- ###ADMIN_SKILLS_FORM### end -->
+
+<!-- ###TEMPLATE_ADMINMENU### end -->
